@@ -2,15 +2,15 @@
 /**
  * Zend Framework (http://framework.zend.com/)
  *
- * @link      http://github.com/zendframework/zf2 for the canonical source repository
- * @copyright Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
+ * @link      http://github.com/zendframework/zend-array-utility for the canonical source repository
+ * @copyright Copyright (c) 2005-2017 Zend Technologies USA Inc. (http://www.zend.com)
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
-namespace ZendTest\Stdlib;
+namespace ZendTest\ArrayUtils;
 
 use PHPUnit_Framework_TestCase as TestCase;
-use Zend\Stdlib\ArrayObject;
+use Zend\ArrayUtils\ArrayObject;
 
 class ArrayObjectTest extends TestCase
 {
@@ -125,7 +125,7 @@ class ArrayObjectTest extends TestCase
         $this->assertSame(['bar' => 'baz'], $ar->getArrayCopy());
     }
 
-    public function testExchangeArrayStdlibArrayObject()
+    public function testExchangeArrayArrayUtilsArrayObject()
     {
         $ar = new ArrayObject(['foo' => 'bar']);
         $old = $ar->exchangeArray(new ArrayObject(['bar' => 'baz']));

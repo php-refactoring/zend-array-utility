@@ -5,7 +5,7 @@ pages:
     - Reference:
       - "Console Helper": console-helper.md
     - Migration: migration.md
-site_name: zend-stdlib
-site_description: Zend\Stdlib
-repo_url: 'https://github.com/zendframework/zend-stdlib'
+site_name: zend-array-utility
+site_description: Zend\ArrayUtils
+repo_url: 'https://github.com/zendframework/zend-array-utility'
 copyright: 'Copyright (c) 2016 <a href="http://www.zend.com/">Zend Technologies USA Inc.</a>'

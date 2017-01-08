@@ -1,17 +1,9 @@
-# zend-stdlib
+# zend-array-utility
 
-[![Build Status](https://secure.travis-ci.org/zendframework/zend-stdlib.svg?branch=master)](https://secure.travis-ci.org/zendframework/zend-stdlib)
-[![Coverage Status](https://coveralls.io/repos/zendframework/zend-stdlib/badge.svg?branch=master)](https://coveralls.io/r/zendframework/zend-stdlib?branch=master)
+[![Build Status](https://secure.travis-ci.org/zendframework/zend-array-utility.svg?branch=master)](https://secure.travis-ci.org/zendframework/zend-array-utility)
+[![Coverage Status](https://coveralls.io/repos/zendframework/zend-array-utility/badge.svg?branch=master)](https://coveralls.io/r/zendframework/zend-array-utility?branch=master)
 
-`Zend\Stdlib` is a set of components that implements general purpose utility
-class for different scopes like:
+`Zend\ArrayUtils` provides utilities for handling and manipulating PHP arrays.
 
-- array utilities functions;
-- general messaging systems;
-- string wrappers;
-- etc.
-
----
-
-- File issues at https://github.com/zendframework/zend-stdlib/issues
-- Documentation is at https://docs.zendframework.com/zend-stdlib/
+- File issues at https://github.com/zendframework/zend-array-utility/issues
+- Documentation is at https://docs.zendframework.com/zend-array-utility

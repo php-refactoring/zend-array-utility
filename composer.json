@@ -1,40 +1,48 @@
 {
-    "name": "zendframework/zend-stdlib",
-    "description": " ",
+    "name": "zendframework/zend-array-utility",
+    "description": "Utility tool for handling and manipulating PHP arrays",
     "license": "BSD-3-Clause",
     "keywords": [
-        "zf2",
-        "stdlib"
+        "zf",
+        "array"
     ],
-    "homepage": "https://github.com/zendframework/zend-stdlib",
+    "homepage": "https://github.com/zendframework/zend-array-utility",
     "autoload": {
         "psr-4": {
-            "Zend\\Stdlib\\": "src/"
+            "Zend\\ArrayUtils\\": "src/"
         }
     },
     "require": {
         "php": "^5.6 || ^7.0"
     },
     "require-dev": {
-        "athletic/athletic": "~0.1",
-        "phpunit/PHPUnit": "~4.0",
-        "squizlabs/php_codesniffer": "^2.6.2"
+        "phpunit/phpunit": "^5.7.5",
+        "zendframework/zend-coding-standard": "^1.0.0",
+        "malukenho/docheader": "^0.1.5",        
+        "sebastian/phpcpd": "^2.0",
+        "phpbench/phpbench": "^0.13.0"
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "3.1-dev",
-            "dev-develop": "3.2-dev"
+        "branch-alias": {            
+            "dev-develop": "0.1-dev"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ZendTest\\Stdlib\\": "test/",
-            "ZendBench\\Stdlib\\": "benchmark/"
+            "ZendTest\\ArrayUtils\\": "test/"
         }
     },
     "scripts": {
+        "check": [
+            "@license-check",
+            "@cs-check",
+            "@cpd",            
+            "@test"
+        ],        
+        "cpd": "phpcpd --exclude=/vendor,/build --fuzzy src test",
         "cs-check": "phpcs --colors",
         "cs-fix": "phpcbf --colors",
+        "license-check": "docheader check src/ test/",
         "test": "phpunit --colors=always",
         "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
         "upload-coverage": "coveralls -v"
