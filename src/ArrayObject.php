@@ -7,7 +7,7 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
-namespace Zend\Stdlib;
+namespace Zend\ArrayUtils;
 
 use ArrayAccess;
 use Countable;

@@ -7,12 +7,12 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
-namespace ZendTest\Stdlib\TestAsset;
+namespace ZendTest\ArrayUtils\TestAsset;
 
 /**
- * @group      Zend_Stdlib
+ * @group      Zend_ArrayUtils
  */
-class ArraySerializable implements \Zend\Stdlib\ArraySerializableInterface
+class ArraySerializable implements \Zend\ArrayUtils\ArraySerializableInterface
 {
     protected $data = [];
 

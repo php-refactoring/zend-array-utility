@@ -7,7 +7,7 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
-namespace Zend\Stdlib\Exception;
+namespace Zend\ArrayUtils\Exception;
 
 /**
  * Extension not loaded exception

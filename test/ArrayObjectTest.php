@@ -7,10 +7,10 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
-namespace ZendTest\Stdlib;
+namespace ZendTest\ArrayUtils;
 
 use PHPUnit_Framework_TestCase as TestCase;
-use Zend\Stdlib\ArrayObject;
+use Zend\ArrayUtils\ArrayObject;
 
 class ArrayObjectTest extends TestCase
 {
@@ -125,7 +125,7 @@ class ArrayObjectTest extends TestCase
         $this->assertSame(['bar' => 'baz'], $ar->getArrayCopy());
     }
 
-    public function testExchangeArrayStdlibArrayObject()
+    public function testExchangeArrayArrayUtilsArrayObject()
     {
         $ar = new ArrayObject(['foo' => 'bar']);
         $old = $ar->exchangeArray(new ArrayObject(['bar' => 'baz']));

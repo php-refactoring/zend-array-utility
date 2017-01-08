@@ -9,7 +9,7 @@
     "homepage": "https://github.com/zendframework/zend-array-utility",
     "autoload": {
         "psr-4": {
-            "Zend\\Stdlib\\": "src/"
+            "Zend\\ArrayUtils\\": "src/"
         }
     },
     "require": {
@@ -29,8 +29,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "ZendTest\\Stdlib\\": "test/",
-            "ZendBench\\Stdlib\\": "benchmark/"
+            "ZendTest\\ArrayUtils\\": "test/"
         }
     },
     "scripts": {

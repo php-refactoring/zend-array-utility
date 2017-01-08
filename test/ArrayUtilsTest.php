@@ -7,14 +7,14 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
-namespace ZendTest\Stdlib;
+namespace ZendTest\ArrayUtils;
 
 use ArrayObject;
 use PHPUnit_Framework_TestCase as TestCase;
 use stdClass;
-use Zend\Stdlib\ArrayUtils;
-use Zend\Stdlib\ArrayUtils\MergeRemoveKey;
-use ZendTest\Stdlib\TestAsset\Parameters;
+use Zend\ArrayUtils\ArrayUtils;
+use Zend\ArrayUtils\ArrayUtils\MergeRemoveKey;
+use ZendTest\ArrayUtils\TestAsset\Parameters;
 
 class ArrayUtilsTest extends TestCase
 {
@@ -284,14 +284,14 @@ class ArrayUtilsTest extends TestCase
             ],
         ];
         $b = [
-            'car' => new \Zend\Stdlib\ArrayUtils\MergeReplaceKey([
+            'car' => new \Zend\ArrayUtils\ArrayUtils\MergeReplaceKey([
                 'met' => 'bet',
             ]),
-            'new' => new \Zend\Stdlib\ArrayUtils\MergeReplaceKey([
+            'new' => new \Zend\ArrayUtils\ArrayUtils\MergeReplaceKey([
                 'foo' => 'get',
             ]),
         ];
-        $this->assertInstanceOf('Zend\Stdlib\ArrayUtils\MergeReplaceKeyInterface', $b['car']);
+        $this->assertInstanceOf('Zend\ArrayUtils\ArrayUtils\MergeReplaceKeyInterface', $b['car']);
         $this->assertEquals($expected, ArrayUtils::merge($a, $b));
     }
 
@@ -456,7 +456,7 @@ class ArrayUtilsTest extends TestCase
      */
     public function testInvalidIteratorsRaiseInvalidArgumentException($test)
     {
-        $this->setExpectedException('Zend\Stdlib\Exception\InvalidArgumentException');
+        $this->setExpectedException('Zend\ArrayUtils\Exception\InvalidArgumentException');
         $this->assertFalse(ArrayUtils::iteratorToArray($test));
     }
 
@@ -513,7 +513,7 @@ class ArrayUtilsTest extends TestCase
     }
 
     /**
-     * @expectedException \Zend\Stdlib\Exception\InvalidArgumentException
+     * @expectedException \Zend\ArrayUtils\Exception\InvalidArgumentException
      */
     public function testInvalidCallableRaiseInvalidArgumentException()
     {
