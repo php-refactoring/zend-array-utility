@@ -29,7 +29,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "ZendTest\\ArrayUtils\\": "test/"
+            "ZendTest\\ArrayUtils\\": "test/",
+            "ZendBench\\ArrayUtils\\": "benchmark/"
         }
     },
     "scripts": {
@@ -37,13 +38,15 @@
             "@license-check",
             "@cs-check",
             "@cpd",            
-            "@test"
+            "@test",
+            "@benchmark"
         ],        
         "cpd": "phpcpd --exclude=/vendor,/build --fuzzy src test",
         "cs-check": "phpcs --colors",
         "cs-fix": "phpcbf --colors",
-        "license-check": "docheader check src/ test/",
+        "license-check": "docheader check src/ test/ benchmark/",
         "test": "phpunit --colors=always",
+        "benchmark": "phpbench run --report=aggregate",
         "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
         "upload-coverage": "coveralls -v"
     }
